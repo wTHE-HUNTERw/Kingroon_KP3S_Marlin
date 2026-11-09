@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: '3.11'
 
@@ -42,7 +42,7 @@ jobs:
         cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Con_BLTouch/
 
     - name: Upload Binaries as Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: Kingroon_KP3S_Marlin_Firmware
         path: build_output/
