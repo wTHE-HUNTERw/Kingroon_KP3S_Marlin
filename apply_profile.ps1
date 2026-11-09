@@ -29,3 +29,4 @@ Write-Host "  & 'C:\Users\erick\.platformio\penv\Scripts\platformio.exe' run -e 
 Write-Host ""
 Write-Host "El archivo compilado se generara automaticamente en:" -ForegroundColor Cyan
 Write-Host "  .pio\build\mks_robin_nano_v1v2\Robin_nano.bin" -ForegroundColor White
+

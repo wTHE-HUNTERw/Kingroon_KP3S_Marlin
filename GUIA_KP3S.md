@@ -87,3 +87,14 @@ git merge upstream/bugfix-2.1.x
 # 4. Subir tus actualizaciones a tu GitHub
 git push origin main
 ```
+
+---
+
+## 6. Compilación Automática en la Nube (GitHub Actions)
+
+Este repositorio incluye un flujo de automatización en [`.github/workflows/build-kp3s-firmware.yml`](./.github/workflows/build-kp3s-firmware.yml):
+
+* Cada vez que hagas `git push` a tu rama `main` en GitHub, GitHub Actions compilará automáticamente en la nube tanto la versión **Sin BLTouch** como la versión **Con BLTouch**.
+* Podrás descargar los archivos `Robin_nano.bin` directamente desde la pestaña **Actions** de tu repositorio en GitHub sin necesidad de tener PlatformIO instalado en la computadora donde estés trabajando.
+
+
