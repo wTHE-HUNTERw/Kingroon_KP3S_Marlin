@@ -25,21 +25,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
 
-    - name: Build Firmware Sin BLTouch (Stock MBL)
+    - name: Build Firmware Marlin Sin BLTouch
       run: |
         cp config_kp3s/stock_mbl/Configuration.h Marlin/
         cp config_kp3s/stock_mbl/Configuration_adv.h Marlin/
         pio run -e mks_robin_nano_v1v2
-        mkdir -p build_output/Sin_BLTouch
-        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Sin_BLTouch/
+        mkdir -p build_output/Marlin_Sin_BLTouch
+        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Marlin_Sin_BLTouch/Marlin_Sin_BLTouch.bin
+        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Marlin_Sin_BLTouch/Robin_nano.bin
 
-    - name: Build Firmware Con BLTouch (ABL Bilinear)
+    - name: Build Firmware Marlin Con BLTouch
       run: |
         cp config_kp3s/bltouch_abl/Configuration.h Marlin/
         cp config_kp3s/bltouch_abl/Configuration_adv.h Marlin/
         pio run -e mks_robin_nano_v1v2
-        mkdir -p build_output/Con_BLTouch
-        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Con_BLTouch/
+        mkdir -p build_output/Marlin_Con_BLTouch
+        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Marlin_Con_BLTouch/Marlin_Con_BLTouch.bin
+        cp .pio/build/mks_robin_nano_v1v2/Robin_nano.bin build_output/Marlin_Con_BLTouch/Robin_nano.bin
 
     - name: Upload Binaries as Artifacts
       uses: actions/upload-artifact@v4

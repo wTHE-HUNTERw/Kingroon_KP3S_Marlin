@@ -6,12 +6,13 @@ Este repositorio contiene la versión actualizada de **Marlin 2.1.x (bugfix)** o
 
 ## 1. Archivos Ya Compilados y Listos para Usar
 
-En la carpeta [`firmware_compilado/`](./firmware_compilado/) tienes los dos binarios generados:
+En la carpeta [`firmware_compilado/`](./firmware_compilado/) tienes los binarios y respaldos generados:
 
 | Carpeta | Descripción | Modo de Homing y Nivelación | Archivo a copiar a la SD |
 | :--- | :--- | :--- | :--- |
-| `firmware_compilado/Sin_BLTouch/` | **Kingroon KP3S 3.0 Stock de fábrica** | Switch físico en esquina (0,0,0) + MBL Manual (4x4 = 16 puntos) | `Robin_nano.bin` |
-| `firmware_compilado/Con_BLTouch/` | **Kingroon KP3S con sensor BLTouch / 3D-Touch** | Switch físico en esquina (0,0,0) + BLTouch en Z_MAX para ABL Bilinear (4x4 = 16 puntos) | `Robin_nano.bin` |
+| `firmware_compilado/Marlin_Sin_BLTouch/` | **Marlin Sin BLTouch** (KP3S 3.0 Stock de fábrica) | Switch físico en esquina (0,0,0) + MBL Manual (4x4 = 16 puntos) | `Robin_nano.bin` |
+| `firmware_compilado/Marlin_Con_BLTouch/` | **Marlin Con BLTouch** (KP3S con sensor 3D-Touch) | Switch físico en esquina (0,0,0) + BLTouch en Z_MAX para ABL Bilinear (4x4 = 16 puntos) | `Robin_nano.bin` |
+| `firmware_compilado/Firmware_Stock_Fabrica/` | **Firmware Stock Original de Fábrica (Respaldo)** | Firmware original v1.0.7 de Kingroon con configuración y pantalla | `Firmware_Stock_Fabrica_KP3_V1.0.7.zip` |
 
 > **Mejora Clave en Esta Versión:**
 > A diferencia de otras configuraciones que hacen el *Home* en el centro de la cama (goteando plástico derretido en el centro durante el calentamiento), este firmware utiliza el microswitch físico de fin de carrera en Z para hacer el `G28` en la **esquina delantera izquierda `(0, 0, 0)`**.
